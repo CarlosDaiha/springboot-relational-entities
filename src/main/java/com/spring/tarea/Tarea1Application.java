@@ -1,4 +1,4 @@
-package com.spring.tarea.main;
+package com.spring.tarea;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
 package com.spring.tarea.models.entities;
 
 import java.io.Serializable;
-import java.util.LinkedList;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "profesor")
+@Table(name = "profesores")
 public class Profesor implements Serializable {
 
 	private static final long serialVersionUID = 3514413446703155863L;
@@ -36,7 +36,7 @@ public class Profesor implements Serializable {
 	private String apellido;
 	
 	@OneToMany(mappedBy = "profesor")
-	private LinkedList<Asignatura> asignaturas;
+	private Set<Asignatura> asignaturas;
 	
 	@OneToOne
 	@JoinColumn(name = "despacho_id")
@@ -82,11 +82,11 @@ public class Profesor implements Serializable {
 		this.apellido = apellido;
 	}
 
-	public LinkedList<Asignatura> getAsignaturas() {
+	public Set<Asignatura> getAsignaturas() {
 		return asignaturas;
 	}
 
-	public void setAsignaturas(LinkedList<Asignatura> asignaturas) {
+	public void setAsignaturas(Set<Asignatura> asignaturas) {
 		this.asignaturas = asignaturas;
 	}
 
